@@ -13,32 +13,33 @@
 </head>
 <body>
 
-<div class="content">
-  <div class="container-image">
-    <img class="background-image" src="images/stars.jpg" alt="space image">
-    <div class="banner">
-      <img class="logo" src="images/bird-icon.png" alt="">
-      <h1>NASA</h1>
+  <div class="content">
+   <div class="container-image">
+      <img class="background-image" src="images/stars.jpg" alt="space image">
+        <div class="banner">
+        <img class="logo" src="images/bird-icon.png" alt="">
+        <h1>NASA</h1>
+        </div>
     </div>
-  </div>
   
-  <div class="container">
-    <p>Have you always considered yourself an explorer? Then you are at the right place. Take your first step now!</p> 
-      
-    <p>sign up for our space program!</p>
+    <div class="container">
+      <p>Have you always considered yourself an explorer? Then you are at the right place. Take your first step now!</p> 
+        
+      <p>sign up for our space program!</p>
 
-    <p><strong>Lets do this!</strong></p>
+      <p><strong>Lets do this!</strong></p>
 
-    <form action="" method="post">
+
+    <!-- aria-labels in form used for screen readers -->
+    <form action="#">
       <section>
-
         <div class="container-input">
           <p>
             <label for="first-name">
               <span>First Name: </span>
               <strong><span aria-label="required">*</span></strong>
             </label>
-            <input class="input-text" type="text" id="first-name" name="username-first">
+            <input class="input-text" type="text" id="first-name" name="username-first" required>
           </p>
           <p>
             <label for="last-name">Last Name:</label>
@@ -52,7 +53,7 @@
               <span>E-mail: </span>
               <strong><span aria-label="required">*</span></strong>
             </label>
-            <input class="input-text" type="email" id="mail" name="usermail">
+            <input class="input-text" type="email" id="mail" name="usermail" required>
           </p>
           
           <p>
@@ -67,14 +68,14 @@
               <span>Password: </span>
               <strong><span aria-label="required">*</span></strong>
             </label>
-            <input class="input-text" type="password" id="pwd" name="password">
+            <input class="input-text" type="password" id="pwd" name="password" required>
           </p>
           <p>
             <label for="pwd-confirm">
               <span>Confirm Password: </span>
               <strong><span aria-label="required">*</span></strong>
             </label>
-            <input class="input-text" type="password" id="pwd-confirm" name="password-confirm">
+            <input class="input-text" type="password" id="pwd-confirm" name="password-confirm" required>
           </p>
         </div>
       </section>
@@ -83,78 +84,83 @@
           <fieldset class="ticket">
             <legend>Ticket:</legend>
               <ul>
-                  <li>
-                    <label for="one_way_ticket">
-                      <input type="radio" id="one_way_ticket" name="ticket_type" value="One">
-                      One-way-ticket
-                    </label>
-                  </li>
-                  <li>
-                    <label for="two_way_ticket">
-                      <input type="radio" id="two_way_ticket" name="ticket_type" value="Two" checked="checked">
-                      Two-way-ticket
-                    </label>
-                  </li>
-                  <li>
-                    <label for="unlimited_ticket">
-                      <input type="radio" id="unlimited_ticket" name="ticket_type" value="Unlimited">
-                      Unlimited
-                    </label>
-                  </li>
-              </ul>
-            </fieldset>
-              <fieldset class="planet">
-                <legend>Planet:</legend>
-                <p class="planet-option">
-                  <label for="planet">
-                    <span>Which Planet would you like to visit?:</span>
+                <li>
+                  <label for="one_way_ticket">
+                  <input type="radio" id="one_way_ticket" name="ticket_type" value="One">
+                  One-way-ticket
                   </label>
-                  <select id="planet" name="planet-choice">
-                    <option value="Mercury">Mercury</option>
-                    <option value="Venus">Venus</option>
-                    <option value="Mars">Mars</option>
-                    <option value="Jupiter">Jupiter</option>
-                    <option value="Saturn">Saturn</option>
-                    <option value="Uranus">Uranus</option>
-                    <option value="Neptune">Neptune</option>
-                    <option value="Pluto">Pluto</option>
-                  </select>
-                </p>
-              </fieldset>
+                </li>
+                <li>
+                  <label for="two_way_ticket">
+                  <input type="radio" id="two_way_ticket" name="ticket_type" value="Two" checked="checked">
+                  Two-way-ticket
+                  </label>
+                </li>
+                <li>
+                  <label for="unlimited_ticket">
+                  <input type="radio" id="unlimited_ticket" name="ticket_type" value="Unlimited">
+                  Unlimited
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="planet">
+            <legend>Planet:</legend>
+              <p class="planet-option">
+                <label for="planet">
+                  <span>Which Planet would you like to visit? :</span>
+                </label>
+                <select id="planet" name="planet-choice">
+                  <option value="Mercury">Mercury</option>
+                  <option value="Venus">Venus</option>
+                  <option value="Mars">Mars</option>
+                  <option value="Jupiter">Jupiter</option>
+                  <option value="Saturn">Saturn</option>
+                  <option value="Uranus">Uranus</option>
+                  <option value="Neptune">Neptune</option>
+                  <option value="Pluto">Pluto</option>
+                </select>
+              </p>
+          </fieldset>
           
           <fieldset class="interests">
-            <legend>Interests:</legend>
+            <legend>Space Interests:</legend>
             
-            <label class="check" for="checkbox" id="checkbox" >Which subjects are you most interested in?
-              <label class="container">One
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
+            <div class="checkbox-grid">
+              <div class="checkbox-container">
+                <input type="checkbox" id="Astrophysics" name="Astrophysics" value="Astrophysics">
+                <label for="Astrophysics"> Astrophysics</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="Astrobiology" name="Astrobiology" value="Astrobiology">
+                <label for="Astrobiology"> Astrobiology</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="Medicine" name="Medicine" value="Medicine">
+                <label for="Medicine"> Medicine in Space </label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="Law" name="Law" value="Law">
+                <label for="Law"> Law in Space </label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="Asteroids" name="Asteroids" value="Asteroids">
+                <label for="Asteroids"> Asteroids</label>
+              </div>
               
-              <label class="container">Two
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
-              <label class="container">Three
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              
-              <label class="container">Four
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-                </fieldset>
-        </div>
-
-        
-        
+              <div class="checkbox-container">
+                <input type="checkbox" id="History" name="History" value="History">
+                <label for="History"> History of Space </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>        
       </section>
-
-
+      <section>
+        <input class="SubmitBtn" type="submit" value="Sign Up" />
+      </section>
     </form>
-  </div>
+    </div>
   </div>
 </body>
 </html>

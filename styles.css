@@ -6,6 +6,11 @@
   color: white;
 }
 
+body{
+  overflow: hidden;
+  background-color: black;
+}
+
 
 h1 {
 font-size: 2rem;
@@ -15,7 +20,7 @@ padding: 0px 15px;
 
 p{
   font-size: 1.6rem;
-  margin: 30px;
+  margin: 25px;
 }
 
 .content{
@@ -23,7 +28,7 @@ p{
 }
 
 .container-image{
-  width: 45%;
+  width: 40%;
 }
 
 .background-image{
@@ -36,7 +41,7 @@ p{
 .banner{
   position:absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 45%;
+  width: 40%;
   height: 20%;
   top: 20%;
   max-height: 150px;
@@ -54,10 +59,12 @@ p{
 
 .container{
   background-color: black;
-  width: 55%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 150px;
+  padding-left: 50px;
 }
 
 fieldset{
@@ -101,7 +108,7 @@ section p{
 
 ul {
   list-style-type: none;  
-  width: 200px;
+  width: 150px;
 }
 
 .planet-option{
@@ -120,3 +127,172 @@ option, .planet-option select{
   width: 200px;
 }
 
+legend{
+  margin-bottom: 10px;
+}
+
+
+.checkbox-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.checkbox-container{
+  margin-right: 15px;
+}
+
+input[type='radio'], input[type='checkbox']{
+  margin-right: 5px;
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: purple;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  box-shadow: 0px 0px 5px 1px white;
+}
+
+input[type='checkbox']:after {
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+}
+
+input[type='checkbox']:checked:after {
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: purple;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+  box-shadow: 0px 0px 5px 1px white;
+}
+
+#planet{
+  color: white;
+  background-color: black;
+  border: black solid 2px;
+  font-weight: 500;
+}
+
+select{
+  background-color: black;
+  color: white;
+  border: 0;
+  box-shadow: 0px 0px 10px 0px purple;
+}
+
+select option {
+  background: purple;
+  color: white;
+}
+
+
+.SubmitBtn{
+  font-weight: 500;
+  margin: 30px;
+  color: purple;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 2.2rem;
+  background-color: black;
+  border: 0;
+  box-shadow: 0 0 10px 2px purple;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.SubmitBtn:hover{
+background-color: purple;
+color: black;
+}
+
+@media (max-width: 1710px) {
+  .checkbox-grid{
+    display: block
+  }
+  .container{
+    padding-right: 100px;
+  }
+  p{
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .container{
+    padding-right: 0px;
+  }
+  .input-text{
+    width: 270px;
+}
+}
+
+@media (max-width: 1140px){
+.container-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } 
+body{
+  overflow: auto;
+  overflow-x: hidden;
+}
+.background-image{
+  height: 100%;
+}
+.input-text{
+  width: 250px;
+}
+}
+
+
+@media (max-width: 900px){
+  .container-input{
+    display: block;
+    margin-bottom: 80px;
+  }
+  .container-options{
+    display: grid;
+    grid-template-columns: 1fr;
+  } 
+  .logo{
+    height: 40% ;
+  }
+  h1{
+    font-size: 1.4rem;
+  }
+}
