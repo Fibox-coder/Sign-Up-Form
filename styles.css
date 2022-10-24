@@ -296,3 +296,9 @@ body{
     font-size: 1.4rem;
   }
 }
+
+@media (max-width: 550px){
+  body{
+    overflow-x: visible;
+  }
+}
