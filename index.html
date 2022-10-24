@@ -29,10 +29,131 @@
 
     <p><strong>Lets do this!</strong></p>
 
-    <fieldset>
+    <form action="" method="post">
+      <section>
 
-      
-    </fieldset>
+        <div class="container-input">
+          <p>
+            <label for="first-name">
+              <span>First Name: </span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input class="input-text" type="text" id="first-name" name="username-first">
+          </p>
+          <p>
+            <label for="last-name">Last Name:</label>
+            <input class="input-text" type="text" id="last-name" name="username-last">
+          </p>
+        </div>
+
+        <div class="container-input">
+          <p>
+            <label for="mail">
+              <span>E-mail: </span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input class="input-text" type="email" id="mail" name="usermail">
+          </p>
+          
+          <p>
+            <label for="phone">Phone Number:</label>
+            <input class="input-text" type="tel" id="phone" name="phone">
+          </p>
+        </div>
+
+        <div class="container-input">
+          <p>
+            <label for="pwd">
+              <span>Password: </span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input class="input-text" type="password" id="pwd" name="password">
+          </p>
+          <p>
+            <label for="pwd-confirm">
+              <span>Confirm Password: </span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input class="input-text" type="password" id="pwd-confirm" name="password-confirm">
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container-options">
+          <fieldset class="ticket">
+            <legend>Ticket:</legend>
+              <ul>
+                  <li>
+                    <label for="one_way_ticket">
+                      <input type="radio" id="one_way_ticket" name="ticket_type" value="One">
+                      One-way-ticket
+                    </label>
+                  </li>
+                  <li>
+                    <label for="two_way_ticket">
+                      <input type="radio" id="two_way_ticket" name="ticket_type" value="Two" checked="checked">
+                      Two-way-ticket
+                    </label>
+                  </li>
+                  <li>
+                    <label for="unlimited_ticket">
+                      <input type="radio" id="unlimited_ticket" name="ticket_type" value="Unlimited">
+                      Unlimited
+                    </label>
+                  </li>
+              </ul>
+            </fieldset>
+              <fieldset class="planet">
+                <legend>Planet:</legend>
+                <p class="planet-option">
+                  <label for="planet">
+                    <span>Which Planet would you like to visit?:</span>
+                  </label>
+                  <select id="planet" name="planet-choice">
+                    <option value="Mercury">Mercury</option>
+                    <option value="Venus">Venus</option>
+                    <option value="Mars">Mars</option>
+                    <option value="Jupiter">Jupiter</option>
+                    <option value="Saturn">Saturn</option>
+                    <option value="Uranus">Uranus</option>
+                    <option value="Neptune">Neptune</option>
+                    <option value="Pluto">Pluto</option>
+                  </select>
+                </p>
+              </fieldset>
+          
+          <fieldset class="interests">
+            <legend>Interests:</legend>
+            
+            <label class="check" for="checkbox" id="checkbox" >Which subjects are you most interested in?
+              <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+                </fieldset>
+        </div>
+
+        
+        
+      </section>
+
+
+    </form>
   </div>
   </div>
 </body>
